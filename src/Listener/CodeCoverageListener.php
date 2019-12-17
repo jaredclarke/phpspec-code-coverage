@@ -76,6 +76,8 @@ class CodeCoverageListener implements EventSubscriberInterface
             $this->io->writeln();
         }
 
+        var_dump($this->coverage->getData());
+
         foreach ($this->reports as $format => $report) {
             if ($this->io && $this->io->isVerbose()) {
                 $this->io->writeln(sprintf('Generating code coverage report in %s format ...', $format));
